@@ -1,0 +1,16 @@
+{
+  "name": "portuguese",
+  "version": "1.0.0",
+  "main": "dist/app.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "lite-server"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.0.0",
+    "lite-server": "^2.5.4"
+  }
+}
