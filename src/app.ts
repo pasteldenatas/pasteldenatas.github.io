@@ -640,6 +640,19 @@ const verbs: WORD[] = [
   },
 ]
 
+// Variables to keep track of score and total questions
+let correctAnswers = 0
+let totalQuestions = 0
+
+// Function to update the score display
+function updateScoreDisplay() {
+  const scoreElement = document.getElementById('score')
+  if (scoreElement) {
+    const percentage = totalQuestions > 0 ? ((correctAnswers / totalQuestions) * 100).toFixed(0) : 0
+    scoreElement.textContent = `${correctAnswers}/${totalQuestions} (${percentage}%)`
+  }
+}
+
 // Function to get a random element from an array
 function getRandomElement<T>(array: T[]): T {
   return array[Math.floor(Math.random() * array.length)]
@@ -714,6 +727,7 @@ function checkAnswerForConjugation() {
     correctResultDiv.textContent = ''
     errorResultDiv.textContent = ''
     if (userAnswer.trim().toLowerCase() === currentCorrectAnswer.toLowerCase()) {
+      correctAnswers++
       correctResultDiv.textContent = 'Correto!'
       errorResultDiv.textContent = ``
       errorResultDivVerb.textContent = ''
@@ -721,6 +735,8 @@ function checkAnswerForConjugation() {
       errorResultDiv.textContent = `Incorreto. A resposta correta é `
       errorResultDivVerb.textContent = currentCorrectAnswer
     }
+    totalQuestions++
+    updateScoreDisplay()
   } else {
     console.error('Result divs not found in the document.')
   }
