@@ -10,12 +10,19 @@ var verbs = [
             nos: 'queremos',
             eles: 'querem',
         },
-        past: {
+        perfeito: {
             eu: 'quis',
             tu: 'quiseste',
             ele: 'quis',
             nos: 'quisemos',
             eles: 'quiseram',
+        },
+        imperfeito: {
+            eu: 'queria',
+            tu: 'querias',
+            ele: 'queria',
+            nos: 'queríamos',
+            eles: 'queriam',
         },
     },
     {
@@ -27,12 +34,19 @@ var verbs = [
             nos: 'ficamos',
             eles: 'ficam',
         },
-        past: {
+        perfeito: {
             eu: 'fiquei',
             tu: 'ficaste',
             ele: 'ficou',
             nos: 'ficamos',
             eles: 'ficaram',
+        },
+        imperfeito: {
+            eu: 'ficava',
+            tu: 'ficavas',
+            ele: 'ficava',
+            nos: 'ficávamos',
+            eles: 'ficavam',
         },
     },
     {
@@ -44,12 +58,19 @@ var verbs = [
             nos: 'devemos',
             eles: 'devem',
         },
-        past: {
+        perfeito: {
             eu: 'devei',
             tu: 'deveste',
             ele: 'deveu',
             nos: 'devemos',
             eles: 'deveram',
+        },
+        imperfeito: {
+            eu: 'devia',
+            tu: 'devias',
+            ele: 'devia',
+            nos: 'devíamos',
+            eles: 'deviam',
         },
     },
     {
@@ -61,12 +82,19 @@ var verbs = [
             nos: 'parecemos',
             eles: 'parecem',
         },
-        past: {
+        perfeito: {
             eu: 'pareci',
             tu: 'pareceste',
             ele: 'pareceu',
             nos: 'parecemos',
             eles: 'pareceram',
+        },
+        imperfeito: {
+            eu: 'parecia',
+            tu: 'parecias',
+            ele: 'parecia',
+            nos: 'parecíamos',
+            eles: 'pareciam',
         },
     },
     {
@@ -78,12 +106,19 @@ var verbs = [
             nos: 'falamos',
             eles: 'falam',
         },
-        past: {
+        perfeito: {
             eu: 'falei',
             tu: 'falaste',
             ele: 'falou',
             nos: 'falamos',
             eles: 'falaram',
+        },
+        imperfeito: {
+            eu: 'falava',
+            tu: 'falavas',
+            ele: 'falava',
+            nos: 'falávamos',
+            eles: 'falavam',
         },
     },
     {
@@ -95,12 +130,19 @@ var verbs = [
             nos: 'deixamos',
             eles: 'deixam',
         },
-        past: {
+        perfeito: {
             eu: 'deixei',
             tu: 'deixaste',
             ele: 'deixou',
             nos: 'deixamos',
             eles: 'deixaram',
+        },
+        imperfeito: {
+            eu: 'deixava',
+            tu: 'deixavas',
+            ele: 'deixava',
+            nos: 'deixávamos',
+            eles: 'deixavam',
         },
     },
     {
@@ -112,12 +154,19 @@ var verbs = [
             nos: 'continuamos',
             eles: 'continuam',
         },
-        past: {
+        perfeito: {
             eu: 'continuei',
             tu: 'continuaste',
             ele: 'continuou',
             nos: 'continuamos',
             eles: 'continuaram',
+        },
+        imperfeito: {
+            eu: 'continuava',
+            tu: 'continuavas',
+            ele: 'continuava',
+            nos: 'continuávamos',
+            eles: 'continuavam',
         },
     },
     {
@@ -129,12 +178,19 @@ var verbs = [
             nos: 'sentimos',
             eles: 'sentem',
         },
-        past: {
+        perfeito: {
             eu: 'senti',
             tu: 'sentiste',
             ele: 'sentiu',
             nos: 'sentimos',
             eles: 'sentiram',
+        },
+        imperfeito: {
+            eu: 'sentia',
+            tu: 'sentias',
+            ele: 'sentia',
+            nos: 'sentíamos',
+            eles: 'sentiam',
         },
     },
     {
@@ -146,12 +202,19 @@ var verbs = [
             nos: 'chegamos',
             eles: 'chegam',
         },
-        past: {
+        perfeito: {
             eu: 'cheguei',
             tu: 'chegaste',
             ele: 'chegou',
             nos: 'chegamos',
             eles: 'chegaram',
+        },
+        imperfeito: {
+            eu: 'chegava',
+            tu: 'chegavas',
+            ele: 'chegava',
+            nos: 'chegávamos',
+            eles: 'chegavam',
         },
     },
     {
@@ -163,12 +226,19 @@ var verbs = [
             nos: 'andamos',
             eles: 'andam',
         },
-        past: {
+        perfeito: {
             eu: 'andei',
             tu: 'andaste',
             ele: 'andou',
             nos: 'andamos',
             eles: 'andaram',
+        },
+        imperfeito: {
+            eu: 'andava',
+            tu: 'andavas',
+            ele: 'andava',
+            nos: 'andávamos',
+            eles: 'andavam',
         },
     },
     {
@@ -180,12 +250,19 @@ var verbs = [
             nos: 'entramos',
             eles: 'entram',
         },
-        past: {
+        perfeito: {
             eu: 'entrei',
             tu: 'entraste',
             ele: 'entrou',
             nos: 'entramos',
             eles: 'entraram',
+        },
+        imperfeito: {
+            eu: 'entrava',
+            tu: 'entravas',
+            ele: 'entrava',
+            nos: 'entrávamos',
+            eles: 'entravam',
         },
     },
     {
@@ -197,12 +274,19 @@ var verbs = [
             nos: 'saímos',
             eles: 'saem',
         },
-        past: {
+        perfeito: {
             eu: 'saí',
             tu: 'saíste',
             ele: 'saiu',
             nos: 'saímos',
             eles: 'saíram',
+        },
+        imperfeito: {
+            eu: 'saía',
+            tu: 'saías',
+            ele: 'saía',
+            nos: 'saíamos',
+            eles: 'saíam',
         },
     },
     {
@@ -214,12 +298,19 @@ var verbs = [
             nos: 'voltamos',
             eles: 'voltam',
         },
-        past: {
+        perfeito: {
             eu: 'voltei',
             tu: 'voltaste',
             ele: 'voltou',
             nos: 'voltamos',
             eles: 'voltaram',
+        },
+        imperfeito: {
+            eu: 'voltava',
+            tu: 'voltavas',
+            ele: 'voltava',
+            nos: 'voltávamos',
+            eles: 'voltavam',
         },
     },
     {
@@ -231,12 +322,19 @@ var verbs = [
             nos: 'precisamos',
             eles: 'precisam',
         },
-        past: {
+        perfeito: {
             eu: 'precisei',
             tu: 'precisaste',
             ele: 'precisou',
             nos: 'precisamos',
             eles: 'precisaram',
+        },
+        imperfeito: {
+            eu: 'precisava',
+            tu: 'precisavas',
+            ele: 'precisava',
+            nos: 'precisávamos',
+            eles: 'precisavam',
         },
     },
     {
@@ -248,12 +346,19 @@ var verbs = [
             nos: 'esperamos',
             eles: 'esperam',
         },
-        past: {
+        perfeito: {
             eu: 'esperei',
             tu: 'esperaste',
             ele: 'esperou',
             nos: 'esperamos',
             eles: 'esperaram',
+        },
+        imperfeito: {
+            eu: 'esperava',
+            tu: 'esperavas',
+            ele: 'esperava',
+            nos: 'esperávamos',
+            eles: 'esperavam',
         },
     },
     {
@@ -265,12 +370,19 @@ var verbs = [
             nos: 'olhamos',
             eles: 'olham',
         },
-        past: {
+        perfeito: {
             eu: 'olhei',
             tu: 'olhaste',
             ele: 'olhou',
             nos: 'olhamos',
             eles: 'olharam',
+        },
+        imperfeito: {
+            eu: 'olhava',
+            tu: 'olhavas',
+            ele: 'olhava',
+            nos: 'olhávamos',
+            eles: 'olhavam',
         },
     },
     {
@@ -282,12 +394,19 @@ var verbs = [
             nos: 'pensamos',
             eles: 'pensam',
         },
-        past: {
+        perfeito: {
             eu: 'pensei',
             tu: 'pensaste',
             ele: 'pensou',
             nos: 'pensamos',
             eles: 'pensaram',
+        },
+        imperfeito: {
+            eu: 'pensava',
+            tu: 'pensavas',
+            ele: 'pensava',
+            nos: 'pensávamos',
+            eles: 'pensavam',
         },
     },
     {
@@ -299,12 +418,19 @@ var verbs = [
             nos: 'começamos',
             eles: 'começam',
         },
-        past: {
+        perfeito: {
             eu: 'comecei',
             tu: 'começaste',
             ele: 'começou',
             nos: 'começamos',
             eles: 'começaram',
+        },
+        imperfeito: {
+            eu: 'começava',
+            tu: 'começavas',
+            ele: 'começava',
+            nos: 'começávamos',
+            eles: 'começavam',
         },
     },
     {
@@ -316,12 +442,19 @@ var verbs = [
             nos: 'conhecemos',
             eles: 'conhecem',
         },
-        past: {
+        perfeito: {
             eu: 'conheci',
             tu: 'conheceste',
             ele: 'conheceu',
             nos: 'conhecemos',
             eles: 'conheceram',
+        },
+        imperfeito: {
+            eu: 'conhecia',
+            tu: 'conhecias',
+            ele: 'conhecia',
+            nos: 'conhecíamos',
+            eles: 'conheciam',
         },
     },
     {
@@ -333,12 +466,19 @@ var verbs = [
             nos: 'vivemos',
             eles: 'vivem',
         },
-        past: {
+        perfeito: {
             eu: 'vivi',
             tu: 'viveste',
             ele: 'viveu',
             nos: 'vivemos',
             eles: 'viveram',
+        },
+        imperfeito: {
+            eu: 'vivia',
+            tu: 'vivias',
+            ele: 'vivia',
+            nos: 'vivíamos',
+            eles: 'viviam',
         },
     },
     {
@@ -350,12 +490,19 @@ var verbs = [
             nos: 'fazemos',
             eles: 'fazem',
         },
-        past: {
+        perfeito: {
             eu: 'fiz',
             tu: 'fizeste',
             ele: 'fez',
             nos: 'fizemos',
             eles: 'fizeram',
+        },
+        imperfeito: {
+            eu: 'fazia',
+            tu: 'fazias',
+            ele: 'fazia',
+            nos: 'fazíamos',
+            eles: 'faziam',
         },
     },
     {
@@ -367,12 +514,19 @@ var verbs = [
             nos: 'dizemos',
             eles: 'dizem',
         },
-        past: {
+        perfeito: {
             eu: 'disse',
             tu: 'disseste',
             ele: 'disse',
             nos: 'dissemos',
             eles: 'disseram',
+        },
+        imperfeito: {
+            eu: 'dizia',
+            tu: 'dizias',
+            ele: 'dizia',
+            nos: 'dizíamos',
+            eles: 'diziam',
         },
     },
     {
@@ -384,12 +538,19 @@ var verbs = [
             nos: 'vimos',
             eles: 'vêm',
         },
-        past: {
+        perfeito: {
             eu: 'vim',
             tu: 'veste',
             ele: 'veio',
             nos: 'viemos',
             eles: 'vieram',
+        },
+        imperfeito: {
+            eu: 'vinha',
+            tu: 'vinhas',
+            ele: 'vinha',
+            nos: 'vínhamos',
+            eles: 'vinham',
         },
     },
     {
@@ -401,12 +562,19 @@ var verbs = [
             nos: 'damos',
             eles: 'dão',
         },
-        past: {
+        perfeito: {
             eu: 'dei',
             tu: 'deste',
             ele: 'deu',
             nos: 'demos',
             eles: 'deram',
+        },
+        imperfeito: {
+            eu: 'dava',
+            tu: 'davas',
+            ele: 'dava',
+            nos: 'dávamos',
+            eles: 'davam',
         },
     },
     {
@@ -418,12 +586,19 @@ var verbs = [
             nos: 'pomos',
             eles: 'põem',
         },
-        past: {
+        perfeito: {
             eu: 'pus',
             tu: 'puseste',
             ele: 'pôs',
             nos: 'pusemos',
             eles: 'puseram',
+        },
+        imperfeito: {
+            eu: 'punha',
+            tu: 'punhas',
+            ele: 'punha',
+            nos: 'púnhamos',
+            eles: 'punham',
         },
     },
     {
@@ -435,12 +610,19 @@ var verbs = [
             nos: 'vemos',
             eles: 'veem',
         },
-        past: {
+        perfeito: {
             eu: 'vi',
             tu: 'viste',
             ele: 'viu',
             nos: 'vimos',
             eles: 'viram',
+        },
+        imperfeito: {
+            eu: 'via',
+            tu: 'vias',
+            ele: 'via',
+            nos: 'víamos',
+            eles: 'viam',
         },
     },
     {
@@ -452,12 +634,19 @@ var verbs = [
             nos: 'somos',
             eles: 'são',
         },
-        past: {
+        perfeito: {
             eu: 'fui',
             tu: 'foste',
             ele: 'foi',
             nos: 'fomos',
             eles: 'foram',
+        },
+        imperfeito: {
+            eu: 'era',
+            tu: 'eras',
+            ele: 'era',
+            nos: 'éramos',
+            eles: 'eram',
         },
     },
     {
@@ -469,12 +658,19 @@ var verbs = [
             nos: 'vamos',
             eles: 'vão',
         },
-        past: {
+        perfeito: {
             eu: 'fui',
             tu: 'foste',
             ele: 'foi',
             nos: 'fomos',
             eles: 'foram',
+        },
+        imperfeito: {
+            eu: 'ia',
+            tu: 'ias',
+            ele: 'ia',
+            nos: 'íamos',
+            eles: 'iam',
         },
     },
     {
@@ -486,12 +682,19 @@ var verbs = [
             nos: 'temos',
             eles: 'têm',
         },
-        past: {
+        perfeito: {
             eu: 'tive',
             tu: 'tiveste',
             ele: 'teve',
             nos: 'tivemos',
             eles: 'tiveram',
+        },
+        imperfeito: {
+            eu: 'tinha',
+            tu: 'tinhas',
+            ele: 'tinha',
+            nos: 'tínhamos',
+            eles: 'tinham',
         },
     },
     {
@@ -503,12 +706,19 @@ var verbs = [
             nos: 'estamos',
             eles: 'estão',
         },
-        past: {
+        perfeito: {
             eu: 'estive',
             tu: 'estiveste',
             ele: 'esteve',
             nos: 'estivemos',
             eles: 'estiveram',
+        },
+        imperfeito: {
+            eu: 'estava',
+            tu: 'estavas',
+            ele: 'estava',
+            nos: 'estávamos',
+            eles: 'estavam',
         },
     },
     {
@@ -520,12 +730,19 @@ var verbs = [
             nos: 'havemos',
             eles: 'hão',
         },
-        past: {
-            eu: '',
-            tu: '',
+        perfeito: {
+            eu: 'houve',
+            tu: 'houveste',
             ele: 'houve',
-            nos: '',
-            eles: '',
+            nos: 'houvemos',
+            eles: 'houveram',
+        },
+        imperfeito: {
+            eu: 'havia',
+            tu: 'havias',
+            ele: 'havia',
+            nos: 'havíamos',
+            eles: 'haviam',
         },
     },
     {
@@ -537,12 +754,19 @@ var verbs = [
             nos: 'trazemos',
             eles: 'trazem',
         },
-        past: {
+        perfeito: {
             eu: 'trouxe',
             tu: 'trouxeste',
             ele: 'trouxe',
             nos: 'trouxemos',
             eles: 'trouxeram',
+        },
+        imperfeito: {
+            eu: 'trazia',
+            tu: 'trazias',
+            ele: 'trazia',
+            nos: 'trazíamos',
+            eles: 'traziam',
         },
     },
     {
@@ -554,12 +778,19 @@ var verbs = [
             nos: 'queremos',
             eles: 'querem',
         },
-        past: {
+        perfeito: {
             eu: 'quis',
             tu: 'quiseste',
             ele: 'quis',
             nos: 'quisemos',
             eles: 'quiseram',
+        },
+        imperfeito: {
+            eu: 'queria',
+            tu: 'querias',
+            ele: 'queria',
+            nos: 'queríamos',
+            eles: 'queriam',
         },
     },
     {
@@ -571,12 +802,19 @@ var verbs = [
             nos: 'sabemos',
             eles: 'sabem',
         },
-        past: {
+        perfeito: {
             eu: 'soube',
             tu: 'soubeste',
             ele: 'soube',
             nos: 'soubemos',
             eles: 'souberam',
+        },
+        imperfeito: {
+            eu: 'sabia',
+            tu: 'sabias',
+            ele: 'sabia',
+            nos: 'sabíamos',
+            eles: 'sabiam',
         },
     },
     {
@@ -588,12 +826,19 @@ var verbs = [
             nos: 'podemos',
             eles: 'podem',
         },
-        past: {
+        perfeito: {
             eu: 'pude',
             tu: 'pudeste',
             ele: 'pôde',
             nos: 'pudemos',
             eles: 'puderam',
+        },
+        imperfeito: {
+            eu: 'podia',
+            tu: 'podias',
+            ele: 'podia',
+            nos: 'podíamos',
+            eles: 'podiam',
         },
     },
     {
@@ -605,19 +850,24 @@ var verbs = [
             nos: 'ficamos',
             eles: 'ficam',
         },
-        past: {
+        perfeito: {
             eu: 'fiquei',
             tu: 'ficaste',
             ele: 'ficou',
             nos: 'ficamos',
             eles: 'ficaram',
         },
+        imperfeito: {
+            eu: 'ficava',
+            tu: 'ficavas',
+            ele: 'ficava',
+            nos: 'ficávamos',
+            eles: 'ficavam',
+        },
     },
 ];
-// Variables to keep track of score and total questions
 var correctAnswers = 0;
 var totalQuestions = 0;
-// Function to update the score display
 function updateScoreDisplay() {
     var scoreElement = document.getElementById('score');
     if (scoreElement) {
@@ -634,12 +884,12 @@ var currentCorrectAnswer = '';
 // Function to ask a random question
 function askRandomQuestionForConjugation() {
     var verb = getRandomElement(verbs);
-    var tenseKey = getRandomElement(['present', 'past']);
+    var tenseKey = getRandomElement(['present', 'perfeito', 'imperfeito']);
     var person = getRandomElement(['eu', 'tu', 'ele', 'nos', 'eles']);
     var questionElement = document.getElementById('question');
     var verbElement = document.getElementById('verb');
     if (questionElement && verbElement) {
-        questionElement.textContent = "Como se conjuga o verbo no ".concat(tenseKey === 'present' ? 'presente do indicativo' : 'pretérito perfeito do indicativo', " a ").concat(person, " ").concat(['nos', 'eles'].includes(person) ? '(plural)' : '(singular)');
+        questionElement.textContent = "Como se conjuga o verbo no ".concat(tenseKey === 'present' ? 'Presente' : tenseKey === 'perfeito' ? 'Perfeito (PPS)' : 'Imperfeito (PIS)', " a ").concat(person, " ").concat(['nos', 'eles'].includes(person) ? '(plural)' : '(singular)');
         verbElement.textContent = verb.infinitive;
     }
     // Ensure that we are only indexing into the Forms part of the WORD type
@@ -648,7 +898,7 @@ function askRandomQuestionForConjugation() {
 }
 function askRandomQuestionForReverse() {
     var verb = getRandomElement(verbs);
-    var tenseKey = getRandomElement(['present', 'past']);
+    var tenseKey = getRandomElement(['present', 'perfeito', 'imperfeito']);
     var person = getRandomElement(['eu', 'tu', 'ele', 'nos', 'eles']);
     var verbInTense = document.getElementById('verb-in-tense');
     if (verbInTense) {
@@ -768,21 +1018,21 @@ function populateConjugationTable(verb) {
         tableBody.innerHTML = '';
         // Create the header row with tenses
         var headerRow = document.createElement('tr');
-        headerRow.innerHTML = "\n<th>Person</th>\n<th>Presente</th>\n<th>PPS</th>\n";
+        headerRow.innerHTML = "\n<th>Person</th>\n<th>Presente</th>\n<th>Perfeito</th>\n<th>Imperfeito</th>\n";
         tableHead.appendChild(headerRow);
         // Create a row for each person
         var persons = ['eu', 'tu', 'ele', 'nos', 'eles'];
         persons.forEach(function (person) {
-            var personRow = createPersonRow(person, verb.present, verb.past);
+            var personRow = createPersonRow(person, verb.present, verb.perfeito, verb.imperfeito);
             tableBody.appendChild(personRow);
         });
     }
 }
 // Helper function to create a row for each person
-function createPersonRow(person, presentForms, pastForms) {
+function createPersonRow(person, presentForms, perfeitoForms, imperfeitoForms) {
     var row = document.createElement('tr');
     var personKey = person.toLowerCase().replace('/', '').trim(); // Adjust the key to match object properties
-    row.innerHTML = "\n<td>".concat(person, "</td>\n<td>").concat(presentForms[personKey], "</td>\n<td>").concat(pastForms[personKey], "</td>\n");
+    row.innerHTML = "\n<td>".concat(person, "</td>\n<td>").concat(presentForms[personKey], "</td>\n<td>").concat(perfeitoForms[personKey], "</td>\n<td>").concat(imperfeitoForms[personKey], "</td>\n");
     return row;
 }
 // Call the function to populate the list on page load
