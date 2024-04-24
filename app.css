@@ -186,6 +186,11 @@ button:active {
   background-color: #f9f9f9;
 }
 
+.verb-translation {
+  font-style: italic;
+  color: #09901b;
+}
+
 @media (max-width: 600px) {
 
   /* Adjust the max-width as needed for your mobile breakpoint */
