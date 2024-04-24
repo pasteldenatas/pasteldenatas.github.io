@@ -879,22 +879,36 @@ function updateScoreDisplay() {
 function getRandomElement(array) {
     return array[Math.floor(Math.random() * array.length)];
 }
-// Variable to store the correct answer for the current question
-var currentCorrectAnswer = '';
+// Define a variable to hold the correct answer
+var currentCorrectAnswer;
 // Function to ask a random question
 function askRandomQuestionForConjugation() {
     var verb = getRandomElement(verbs);
-    var tenseKey = getRandomElement(['present', 'perfeito', 'imperfeito']);
+    var tenses = {
+        'option-present': 'present',
+        'option-pps': 'perfeito',
+        'option-pis': 'imperfeito',
+    };
+    var selectedTenses = Object.keys(tenses)
+        .filter(function (checkboxId) {
+        var checkboxElement = document.getElementById(checkboxId);
+        return checkboxElement !== null && checkboxElement.checked;
+    })
+        .map(function (checkboxId) { return tenses[checkboxId]; });
+    // Use all tenses if none are selected
+    var tenseKey = selectedTenses.length > 0 ? getRandomElement(selectedTenses) : getRandomElement(Object.values(tenses));
     var person = getRandomElement(['eu', 'tu', 'ele', 'nos', 'eles']);
     var questionElement = document.getElementById('question');
     var verbElement = document.getElementById('verb');
     if (questionElement && verbElement) {
-        questionElement.textContent = "Como se conjuga o verbo no ".concat(tenseKey === 'present' ? 'Presente' : tenseKey === 'perfeito' ? 'Perfeito (PPS)' : 'Imperfeito (PIS)', " a ").concat(person, " ").concat(['nos', 'eles'].includes(person) ? '(plural)' : '(singular)');
+        var tenseDisplay = tenseKey === 'present' ? 'Presente' : tenseKey === 'perfeito' ? 'Perfeito (PPS)' : 'Imperfeito (PIS)';
+        var personDisplay = ['nos', 'eles'].includes(person) ? '(plural)' : '(singular)';
+        questionElement.textContent = "Como se conjuga o verbo no ".concat(tenseDisplay, " a ").concat(person, " ").concat(personDisplay);
         verbElement.textContent = verb.infinitive;
+        // Ensure that we are only indexing into the Forms part of the WORD type
+        var tenseForms = verb[tenseKey]; // Exclude 'infinitive' from the keys
+        currentCorrectAnswer = tenseForms[person]; // Store the correct answer
     }
-    // Ensure that we are only indexing into the Forms part of the WORD type
-    var tenseForms = verb[tenseKey]; // Exclude 'infinitive' from the keys
-    currentCorrectAnswer = tenseForms[person]; // Store the correct answer
 }
 function askRandomQuestionForReverse() {
     var verb = getRandomElement(verbs);

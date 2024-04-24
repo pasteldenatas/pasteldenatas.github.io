@@ -896,27 +896,42 @@ function getRandomElement<T>(array: T[]): T {
   return array[Math.floor(Math.random() * array.length)]
 }
 
-// Variable to store the correct answer for the current question
-let currentCorrectAnswer: string = ''
+// Define a variable to hold the correct answer
+let currentCorrectAnswer: string
 
 // Function to ask a random question
 function askRandomQuestionForConjugation() {
   const verb = getRandomElement(verbs)
-  const tenseKey = getRandomElement(['present', 'perfeito', 'imperfeito']) as keyof Omit<WORD, 'infinitive'>
+  const tenses: { [key: string]: keyof Omit<WORD, 'infinitive'> } = {
+    'option-present': 'present',
+    'option-pps': 'perfeito',
+    'option-pis': 'imperfeito',
+  }
+  const selectedTenses = Object.keys(tenses)
+    .filter((checkboxId) => {
+      const checkboxElement = document.getElementById(checkboxId) as HTMLInputElement | null
+      return checkboxElement !== null && checkboxElement.checked
+    })
+    .map((checkboxId) => tenses[checkboxId])
+
+  // Use all tenses if none are selected
+  const tenseKey =
+    selectedTenses.length > 0 ? getRandomElement(selectedTenses) : (getRandomElement(Object.values(tenses)) as keyof Omit<WORD, 'infinitive'>)
+
   const person = getRandomElement(['eu', 'tu', 'ele', 'nos', 'eles']) as keyof Forms
   const questionElement = document.getElementById('question')
   const verbElement = document.getElementById('verb')
+
   if (questionElement && verbElement) {
-    questionElement.textContent = `Como se conjuga o verbo no ${
-      tenseKey === 'present' ? 'Presente' : tenseKey === 'perfeito' ? 'Perfeito (PPS)' : 'Imperfeito (PIS)'
-    } a ${person} ${['nos', 'eles'].includes(person) ? '(plural)' : '(singular)'}`
-
+    const tenseDisplay = tenseKey === 'present' ? 'Presente' : tenseKey === 'perfeito' ? 'Perfeito (PPS)' : 'Imperfeito (PIS)'
+    const personDisplay = ['nos', 'eles'].includes(person) ? '(plural)' : '(singular)'
+    questionElement.textContent = `Como se conjuga o verbo no ${tenseDisplay} a ${person} ${personDisplay}`
     verbElement.textContent = verb.infinitive
-  }
 
-  // Ensure that we are only indexing into the Forms part of the WORD type
-  const tenseForms = verb[tenseKey] // Exclude 'infinitive' from the keys
-  currentCorrectAnswer = tenseForms[person] // Store the correct answer
+    // Ensure that we are only indexing into the Forms part of the WORD type
+    const tenseForms = verb[tenseKey] // Exclude 'infinitive' from the keys
+    currentCorrectAnswer = tenseForms[person] // Store the correct answer
+  }
 }
 function askRandomQuestionForReverse() {
   const verb = getRandomElement(verbs)
