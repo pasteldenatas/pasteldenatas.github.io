@@ -110,7 +110,7 @@ button:active {
 .flex-container>.checkbox-label {
 
   font-weight: normal;
-  padding-right: 20px;
+  padding-right: 10px;
   /* padding-bottom: 20px; */
   padding-left: 5px;
   font-size: 20px;
@@ -120,7 +120,7 @@ button:active {
 
 .flex-container>.checkbox {
   width: 20px;
-  /* padding-bottom: 20px; */
+  margin-left: 15px;
   height: 20px;
 }
 
@@ -143,8 +143,8 @@ button:active {
 }
 
 .verbs-list {
-  font-size: 15px;
-  margin: 20px;
+  font-size: 14px;
+  margin: 15px;
   padding: 0;
   list-style-type: none;
   display: flex;
@@ -193,13 +193,34 @@ button:active {
 
 @media (max-width: 600px) {
 
+  .flex-container>.checkbox-label {
+
+    font-weight: normal;
+    padding-right: 4px;
+    /* padding-bottom: 20px; */
+    padding-left: 4px;
+    font-size: 14px;
+    color: #0099ff;
+
+  }
+
+  .verbs-list {
+    font-size: 10px;
+    margin: 15px;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+  }
+
   /* Adjust the max-width as needed for your mobile breakpoint */
   .conjugation-table,
   .conjugation-table th,
   .conjugation-table td {
     padding: 4px;
     /* Smaller padding for smaller screens */
-    font-size: 0.8em;
+    font-size: 0.6em;
     /* Smaller font size for better readability on small screens */
   }
 
