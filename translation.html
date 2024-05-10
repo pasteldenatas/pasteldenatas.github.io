@@ -16,19 +16,14 @@
       <div class="header-links"><a href="translation.html">Translation</a></div>
       <div class="header-links"><a href="revers.html">Reverse</a></div>
     </div>
-    <div id="verbs-list" class="verbs-list"></div>
-    <table id="conjugation-table" class="conjugation-table">
-      <thead>
-        <tr>
-          <th>Person</th>
-          <th>Presente</th>
-          <th>Perfeito</th>
-          <th>Imperfeito</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Rows with conjugation data for Presente, PPS, and Imperfeito will be populated dynamically using JavaScript -->
-      </tbody>
-    </table>
+    <div class="verbs-list-container">
+      <div>Make double click to show translation</div>
+      <ul id="verbs-list" class="verbs-list">
+        <!-- Verb links will be populated here by the TypeScript code -->
+      </ul>
+    </div>
+    <div id="verb-translation-container">
+      <p id="verb-translation" class="verb-translation"></p>
+    </div>
   </body>
 </html>

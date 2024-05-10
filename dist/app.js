@@ -2167,20 +2167,20 @@ if (inputFieldForReverse)
             checkAnswerForReverse();
         }
     });
-// Function to populate the list of infinitive words
-function populateInfinitiveList() {
-    var verbsListElement = document.getElementById('verbs-list');
-    if (verbsListElement) {
-        verbs.forEach(function (verb) {
-            var link = document.createElement('a');
-            link.href = '#';
-            link.textContent = verb.infinitive;
-            link.classList.add('infinitive-link');
-            link.addEventListener('click', function () { return populateConjugationTable(verb); });
-            verbsListElement.appendChild(link);
-        });
-    }
-}
+// // Function to populate the list of infinitive words
+// function populateInfinitiveList() {
+//   const verbsListElement = document.getElementById('verbs-list')
+//   if (verbsListElement) {
+//     verbs.forEach((verb) => {
+//       const link = document.createElement('a')
+//       link.href = '#'
+//       link.textContent = verb.infinitive
+//       link.classList.add('infinitive-link')
+//       link.addEventListener('click', () => populateConjugationTable(verb))
+//       verbsListElement.appendChild(link)
+//     })
+//   }
+// }
 // Function to populate the conjugation table for a given verb
 function populateConjugationTable(verb) {
     var tableHead = document.querySelector('#conjugation-table thead');
@@ -2212,3 +2212,32 @@ function createPersonRow(person, presentForms, perfeitoForms, imperfeitoForms) {
 document.addEventListener('DOMContentLoaded', function () {
     populateInfinitiveList();
 });
+// Function to reset the color of all verb links
+function resetVerbLinksColor() {
+    var links = document.querySelectorAll('.infinitive-link');
+    links.forEach(function (link) {
+        link.classList.remove('active-verb');
+    });
+}
+function populateInfinitiveList() {
+    var verbsListElement = document.getElementById('verbs-list');
+    if (verbsListElement) {
+        verbs.forEach(function (verb) {
+            var link = document.createElement('a');
+            link.href = '#';
+            link.textContent = verb.infinitive;
+            link.classList.add('infinitive-link');
+            link.addEventListener('dblclick', function (event) {
+                event.preventDefault();
+                resetVerbLinksColor(); // Reset the color of all verb links
+                link.classList.add('active-verb'); // Add class to change color for the active verb
+                var verbTranslationElement = document.getElementById('verb-translation');
+                if (verbTranslationElement) {
+                    verbTranslationElement.textContent = verb.translation; // Display the translation
+                }
+            });
+            link.addEventListener('click', function () { return populateConjugationTable(verb); });
+            verbsListElement.appendChild(link);
+        });
+    }
+}

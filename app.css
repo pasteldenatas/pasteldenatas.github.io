@@ -191,6 +191,11 @@ button:active {
   color: #09901b;
 }
 
+.infinitive-link.active-verb {
+  background-color: #63cbb5;
+  /* Change color to indicate active verb */
+}
+
 @media (max-width: 600px) {
 
   .flex-container>.checkbox-label {
